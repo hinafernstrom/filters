@@ -4,7 +4,7 @@ body {
 }
 
 h2 {
-  break-before: page;
+  break-before: right;
 }
 
 @media print {
@@ -21,8 +21,21 @@ h2 {
 @page:left {
   margin-left: 0.25in;
   margin-right: 1in;
+  @bottom-left {
+    content: counter(page);
+  }
+  @bottom-right {
+    content:"What is document?";
+  }
 }
 @page:right {
   margin-left: 1in;
   margin-right: 0.25in;
+
+@bottom-left {
+  content:"E Roon Kang";
+}
+@bottom-right {
+  content: counter(page);
+}
 }

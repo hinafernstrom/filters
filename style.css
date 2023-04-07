@@ -1,41 +1,599 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  font-family: sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+  font-family: "helvetica";
   background: lightgray;
 }
-
-h2 {
-  break-before: right;
+h1{
+  font-family: "pinyon script";
+  font-size: 210px;
+  color: white;
+  position: absolute;
+  left:-160px;
+  top: 230px;
+  transform: rotate(90deg);
 }
-
+ten{
+  /* break-before: page;
+  font-family: "pinyon script";
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  left:-160px;
+  top: 230px; */
+}
+h2 {
+  break-before: page;
+  /* font-family: "pinyon script";
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left:70px;
+  top: 350px;
+  transform: rotate(90deg); */
+}
 @media print {
   body {
     background: white;
   }
 }
-
 @page {
-  size: 5in 8in;
+  size: 4.75in 8in;
   margin-top: 0.25in;
   margin-bottom: 0.5in;
+  bleed: 0.25in;
+  marks: crop; 
+
 }
 @page:left {
   margin-left: 0.25in;
-  margin-right: 1in;
+  margin-right: 0.75in;
   @bottom-left {
     content: counter(page);
+    color:white; 
+    font-size: 7pt;
   }
   @bottom-right {
-    content:"What is document?";
+    content:"Identity";
+    color:white; 
+    font-size: 7pt;
   }
 }
 @page:right {
-  margin-left: 1in;
+  margin-left: 0.75in;
   margin-right: 0.25in;
+  @bottom-left {
+    content:"Hina Fernstrom";
+    color:white; 
+    font-size: 7pt;
+  }
+  @bottom-right {
+    content: counter(page);
+    color:white; 
+    font-size: 7pt;
+  }
+}
 
-@bottom-left {
-  content:"E Roon Kang";
+.IDONE100 {
+  break-before: page;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+  width: 200px;
+  height: 130px;
 }
-@bottom-right {
-  content: counter(page);
+.IDONE50 {
+  position: absolute;
+  left: 5px;
+  top: 200px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
 }
+.IDONE20 {
+  position: absolute;
+  left: 5px;
+  top: 350px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDONE10 {
+  position: absolute;
+  left: 5px;
+  top: 500px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTWO100 {
+  position: absolute;
+  left: 220px;
+  top: 50px;
+  width: 200px;
+  height: 130px;
+}
+.IDTWO50 {
+  position: absolute;
+  left: 220px;
+  top: 200px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTWO20 {
+  position: absolute;
+  left: 220px;
+  top: 350px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTWO10 {
+  position: absolute;
+  left: 220px;
+  top: 500px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTHREE100 {
+  position: absolute;
+  left: -60px;
+  top: 50px;
+  break-before: page;
+  width: 200px;
+  height: 130px;
+}
+.IDTHREE20 {
+  position: absolute;
+  left: -60px;
+  top: 200px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTHREE10 {
+  position: absolute;
+  left: -60px;
+  top: 350px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDTHREE5 {
+  position: absolute;
+  left: -60px;
+  top: 500px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDFOUR100 {
+  position: absolute;
+  left: 155px;
+  top: 50px;
+  width: 200px;
+  height: 130px;
+}
+.IDFOUR50 {
+  position: absolute;
+  left: 155px;
+  top: 200px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDFOUR20 {
+  position: absolute;
+  left: 155px;
+  top: 350px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.IDFOUR10 {
+  position: absolute;
+  left: 155px;
+  top: 500px;
+  width: 200px;
+  height: 130px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.mockuptwo {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: 10px;
+}
+.mockupcomment{
+  /* break-before: page; */
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  Top: 650px;
+  Left: -30px;
+}
+.mockupthree {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: -40px;
+  break-before: page;
+}
+.mockupcomment2{
+  /* break-before: page; */
+  width: 220px;
+  height: 50px;
+  object-fit: fill;
+  position: absolute;
+  Top: 650px;
+  Left: 170px;
+}
+.mockupfour {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: 10px;
+  break-before: page;
+}
+.mockupcomment3{
+  width: 240px;
+  height: 50px;
+  position: absolute;
+  Top: 650px;
+  Left: -30px;
+}
+.mockupfive {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: -40px;
+  break-before: page;
+}
+.mockupcomment5{
+  /* break-before: page; */
+  width: 200px;
+  height: 60px;
+  object-fit: fill;
+  position: absolute;
+  Top: 650px;
+  Left: 190px;
+}
+.mockupsix{
+  position: absolute;
+  break-before: page;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: 10px;
+}
+.mockupcomment4{
+  /* break-before: page; */
+  width: 230px;
+  height: 50px;
+  position: absolute;
+  Top: 650px;
+  Left: -30px;
+}
+.mockupseven {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: -40px;
+  break-before: page;
+}
+.mockupcomment6{
+  width: 180px;
+  height: 60px;
+  /* object-fit: fill; */
+  position: absolute;
+  Top: 650px;
+  Left: 210px;
+}
+
+.text{
+  break-before: page;
+  color:aqua;
+}
+#one{
+  color:pink; 
+  font-size: 40px;
+}
+#two{
+  color:yellow; 
+  font-size: 20px;
+}
+#three{
+  color:blue; 
+  font-size: 50px;
+}
+#four{
+  color:white; 
+  font-size: 40px;
+}
+#five{
+  color:red; 
+  font-size: 30px;
+}
+#six{
+  color:purple; 
+  font-size: 10px;
+}
+#seven{
+  color:orange; 
+  font-size: 50px;
+}
+.one10{
+  break-before: page;
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  width: 170px;
+  height: 230px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.one20{
+  position: absolute;
+  left: 200px;
+  top: 20px;
+  width: 170px;
+  height: 230px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.one50{
+  position: absolute;
+  left: 5px;
+  top: 280px;
+  width: 170px;
+  height: 230px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.one80{
+  position: absolute;
+  left: 200px;
+  top: 280px;
+  width: 170px;
+  height: 230px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.cm1{
+  break-before: page;
+  width: 300px;
+  height: 80px;
+  position: absolute;
+  Top: 600px;
+  Left: 50px;
+}
+.cm2{
+  break-before: page;
+  width: 300px;
+  height: 80px;
+}
+.two10{
+  position: absolute;
+  left: 5px;
+  top: 420px;
+  width: 170px;
+  height: 250px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.two20{
+  position: absolute;
+  left: 200px;
+  top: 420px;
+  width: 170px;
+  height: 250px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.two50{
+  break-before: page;
+  position: absolute;
+  left: -5px;
+  top: 420px;
+  width: 170px;
+  height: 250px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.two80{
+  position: absolute;
+  left: 190px;
+  top: 420px;
+  width: 170px;
+  height: 250px;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.wordart{
+  break-before: page;
+  width: 1020px;
+  height: 760px;
+  position: absolute;
+  left: -65px;
+  top: -35px;
+}
+.wordart2{
+  break-before: page;
+  width: 1020px;
+  height: 760px;
+  position: absolute;
+  left: -570px;
+  top: -35px;
+}
+.iphone{
+  break-before: page;
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  Top: 30px;
+  Left: 10px;
 }

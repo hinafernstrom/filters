@@ -30,6 +30,13 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+.title{
+  font-family: "pinyon script";
+}
+@font-face {
+  font-family: "pinyon script";
+  src: url(PinyonScript-Regular.ttf);
+}
 ol, ul {
 	list-style: none;
 }
@@ -47,7 +54,7 @@ table {
 }
 body {
   font-family: "helvetica";
-  background: lightgray;
+  background: black;
 }
 h1{
   font-family: "pinyon script";
@@ -79,7 +86,7 @@ h2 {
 }
 @media print {
   body {
-    background: white;
+    background: black;
   }
 }
 @page {
@@ -88,6 +95,7 @@ h2 {
   margin-bottom: 0.5in;
   bleed: 0.25in;
   marks: crop; 
+  color:black; 
 
 }
 @page:left {
@@ -95,7 +103,7 @@ h2 {
   margin-right: 0.75in;
   @bottom-left {
     content: counter(page);
-    color:white; 
+    color:black; 
     font-size: 7pt;
   }
   @bottom-right {
@@ -109,7 +117,7 @@ h2 {
   margin-right: 0.25in;
   @bottom-left {
     content:"Hina Fernstrom";
-    color:white; 
+    color:black; 
     font-size: 7pt;
   }
   @bottom-right {
